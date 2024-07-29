@@ -9,6 +9,12 @@ get_header();
   class="second-project-section section container fx-col-sb"
   id="second-project"
 >
+<nav>
+    <ul class="breadcrumbs">
+        <li><a href="/">Home</a></li>
+        <li><?php the_title(); ?></li>
+    </ul>
+    </nav>
   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/customair-mockup.jpg" alt="" />
   <div class="project-info">
     <h2>Lorem ipsum dolor sit</h2>
@@ -102,6 +108,8 @@ get_header();
   </div>
   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/photographer-mockup.jpg" alt="" />
 </section>
+<?php include "modal.php";?>
 
 </main>
+<div class="cursor"></div>
 <?php get_footer(); ?>

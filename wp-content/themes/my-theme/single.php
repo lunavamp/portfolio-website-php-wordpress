@@ -3,6 +3,12 @@ get_header();
 ?>
 <main>
 <section class="blog-post-section container">
+<nav>
+    <ul class="breadcrumbs">
+        <li><a href="/">Home</a></li>
+        <li><?php the_title(); ?></li>
+    </ul>
+    </nav>
     <?php
     while ( have_posts() ) : the_post();
         ?>
@@ -27,6 +33,7 @@ get_header();
         </article>
     <?php endwhile; ?>
 </section>
+<?php include "modal.php";?>
 </main>
-
+<div class="cursor"></div>
 <?php get_footer(); ?>

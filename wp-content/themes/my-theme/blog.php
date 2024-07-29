@@ -12,6 +12,12 @@ $query_args = [
 ?>
 <main>
 <section class="blog-section container fx-col-sb">
+<nav>
+    <ul class="breadcrumbs">
+        <li><a href="/">Home</a></li>
+        <li><?php the_title(); ?></li>
+    </ul>
+    </nav>
 
 <h2>Blog</h2>
 
@@ -47,6 +53,7 @@ $query_args = [
           </div>
         </div>
       </section>
+      <?php include "modal.php";?>
 </main>
-
+<div class="cursor"></div>
 <?php get_footer(); ?>

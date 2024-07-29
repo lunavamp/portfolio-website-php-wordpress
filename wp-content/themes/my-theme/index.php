@@ -123,7 +123,7 @@
       <h2>Took a look at the lastest projects I've done</h2>
       <div class="projects-cards fx-sb">
         <div class="card">
-          <a href="portfolio.php#first-project" class="project-card-img">
+          <a href="portfolio/#first-project" class="project-card-img">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup3.jpg" alt="" />
           </a>
           <div class="fx-col-sb">
@@ -132,7 +132,7 @@
           </div>
         </div>
         <div class="card">
-          <a href="portfolio.php#second-project" class="project-card-img">
+          <a href="portfolio/#second-project" class="project-card-img">
             <img
               src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup5.jpg"
               alt=""
@@ -145,7 +145,7 @@
           </div>
         </div>
         <div class="card">
-          <a href="portfolio.php#third-project" class="project-card-img">
+          <a href="portfolio/#third-project" class="project-card-img">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup1.jpg" alt="" />
           </a>
           <div class="fx-col-sb">
@@ -153,8 +153,8 @@
             <p>Lorem, ipsum dolor.</p>
           </div>
         </div>
-        <div class="card">
-          <a href="portfolio.php" class="project-card-img">
+        <div class="portfolio/#third-project">
+          <a href="portfolio/" class="project-card-img">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup4.jpg" alt="" />
           </a>
           <div class="fx-col-sb">
@@ -357,11 +357,10 @@
     </div>
   </div>
 </section>
-
-
+<?php include "modal.php";?>
     </main>
     <?php get_footer(); ?>
-
+    <div class="cursor"></div>
   </body>
 </html>
 
