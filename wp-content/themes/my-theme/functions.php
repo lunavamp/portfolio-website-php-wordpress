@@ -11,6 +11,7 @@ function portfolio_scripts() {
   
 }
 
+add_theme_support( 'post-thumbnails' );
 
 function enqueue_svg_sprite() {
     
