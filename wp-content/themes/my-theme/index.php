@@ -14,8 +14,7 @@
         <svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/svg/sprite.svg#linkedin-svg" /></svg>
       </div>
       <p class="banner-text">
-        My work integrates the latest technologies to deliver an outstanding
-        user experience. Lorem ipsum dolor sit amet consectetur adipisicing.
+      My passion is to create modern, functional, and visually appealing web applications. I strive to make each project unique and tailored to the client's needs.
       </p>
     </div>
   </div>
@@ -30,8 +29,7 @@
       <div class="fx-sb skills-info">
         <h2>My Expertise and Proficiencies</h2>
         <p class="skills-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, porro
-          earum dignissimos
+        My work integrates the latest technologies to deliver an outstanding user experience.
         </p>
       </div>
 
@@ -189,7 +187,7 @@
         <summary>Can you show examples of your projects?</summary>
       </details>
       <p>
-        Yes, you can check out my work in the "Portfolio" page on this website.
+        Yes, you can check out my work in the <a href="portfolio/">"Portfolio" page</a> on this website.
       </p>
     </div>
 

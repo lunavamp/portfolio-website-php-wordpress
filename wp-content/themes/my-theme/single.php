@@ -2,10 +2,11 @@
 get_header();
 ?>
 <main>
-<section class="blog-post-section container">
+<section class="blog-post-section container fx-col-sb">
 <nav>
     <ul class="breadcrumbs">
         <li><a href="/">Home</a></li>
+        <li><a href="blog/">Blog</a></li>
         <li><?php the_title(); ?></li>
     </ul>
     </nav>

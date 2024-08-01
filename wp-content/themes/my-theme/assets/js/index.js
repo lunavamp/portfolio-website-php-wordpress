@@ -29,9 +29,7 @@
         animationDuration: 800,
         animationTimingFunc: "ease-in-out",
         breakpoints: {
-          990: { perView: 3 },
-          768: { perView: 2 },
-          468: { perView: 1 },
+          990: { perView: 1 },
         },
       }).mount();
     });

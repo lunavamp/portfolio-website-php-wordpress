@@ -21,12 +21,12 @@ $query_args = [
 
 <h2>Blog</h2>
 
-        <div class="search fx-sb">
-          <input type="search" name="search" placeholder="Search by title..." />
-          <button>
+        <form action="<?php bloginfo('url'); ?>" method="get" class="search fx-sb">
+          <input type="search" name="search" value="<?php echo get_search_query(); ?>" placeholder="Search by title..." />
+          <button  type="submit">
             <svg><use xlink:href="#search-svg" /></svg>
           </button>
-        </div>
+        </form>
         <div class="blog-cards">
             <?php 
             wp_reset_query(); 
