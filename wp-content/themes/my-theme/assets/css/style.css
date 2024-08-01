@@ -635,6 +635,37 @@ p + p {
   }
 }
 
+.fourth-project-section img {
+  max-width: 90rem;
+  margin-left: -5rem;
+}
+
+@media (max-width: 980px) {
+  .fourth-project-section {
+    flex-direction: column;
+  }
+  .fourth-project-section img {
+    max-width: 38rem;
+  }
+}
+
+.fifth-project-section {
+  gap: 5rem;
+}
+
+.fifth-project-section img {
+  max-width: 90rem;
+}
+
+@media (max-width: 980px) {
+  .fifth-project-section {
+    flex-direction: column;
+  }
+  .fifth-project-section img {
+    max-width: 38rem;
+  }
+}
+
 .blog-section,
 .blog-post-section {
   padding: 8rem 0 10.8rem;

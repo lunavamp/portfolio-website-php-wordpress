@@ -151,9 +151,9 @@
             <p>Lorem, ipsum dolor.</p>
           </div>
         </div>
-        <div class="portfolio/#third-project">
+        <div class="card">
           <a href="portfolio/" class="project-card-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup4.jpg" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup2.jpg" alt="" />
           </a>
           <div class="fx-col-sb">
             <p>Web</p>

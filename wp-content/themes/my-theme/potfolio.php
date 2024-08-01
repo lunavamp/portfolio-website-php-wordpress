@@ -7,9 +7,8 @@ get_header();
 <main class="body-portfolio">
 <section
   class="second-project-section section container fx-col-sb"
-  id="second-project"
->
-<nav>
+  id="second-project">
+  <nav>
     <ul class="breadcrumbs">
         <li><a href="/">Home</a></li>
         <li><?php the_title(); ?></li>
@@ -49,8 +48,7 @@ get_header();
 </section>
 <section
   class="first-project-section section container fx-col-sb"
-  id="first-project"
->
+  id="first-project">
   <div class="fx-sb project-container">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/yakist-mockup.jpg" alt="" />
     <div class="project-info fx-col-sb">
@@ -87,8 +85,7 @@ get_header();
 </section>
 <section
   class="third-project-section section container fx-sb"
-  id="third-project"
->
+  id="third-project">
   <div class="project-info fx-col-sb">
     <h2>Lorem, ipsum dolor.</h2>
     <p>
@@ -108,6 +105,54 @@ get_header();
   </div>
   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/photographer-mockup.jpg" alt="" />
 </section>
+<section
+  class="fourth-project-section section container fx-sb"
+  id="fourth-project">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/todo-app-mockup.jpg" alt="" />
+  <div class="project-info fx-col-sb">
+    <h2>ToDo Management App.</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vel ut sit
+      expedita deserunt explicabo sed possimus mollitia nemo labore voluptatum
+      nobis, sapiente odit quisquam voluptates distinctio dolorum inventore
+      doloremque.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ducimus
+      mollitia dolorum voluptatum reiciendis maiores, expedita architecto velit?
+      Repellat, illum labore. Expedita aut placeat molestiae architecto
+      necessitatibus odit asperiores! Dicta, consequuntur! Labore voluptatem
+      molestias vitae esse optio aut, cumque repudiandae doloribus sint omnis.
+      Eveniet ad aut hic voluptates nam omnis.
+    </p>
+    <a href="https://lunavamp.github.io/todolist-react-app/" class="btn2"
+        >Visit Website</a
+      >
+  </div>
+</section>
+<section
+  class="fifth-project-section section container fx-sb"
+  id="fifth-project">
+  <div class="project-info fx-col-sb">
+    <h2>Lorem, ipsum dolor.</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vel ut sit
+      expedita deserunt explicabo sed possimus mollitia nemo labore voluptatum
+      nobis, sapiente odit quisquam voluptates distinctio dolorum inventore
+      doloremque.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ducimus
+      mollitia dolorum voluptatum reiciendis maiores, expedita architecto velit?
+      Repellat, illum labore. Expedita aut placeat molestiae architecto
+      necessitatibus odit asperiores! Dicta, consequuntur! Labore voluptatem
+      molestias vitae esse optio aut, cumque repudiandae doloribus sint omnis.
+      Eveniet ad aut hic voluptates nam omnis.
+    </p>
+  </div>
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/trip-mockup.jpg" alt="" />
+</section>
+
 <?php include "modal.php";?>
 
 </main>
