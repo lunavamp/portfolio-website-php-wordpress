@@ -23,7 +23,7 @@
       new Glide(".glide", {
         type: "carousel",
         startAt: 0,
-        autoplay: 3500,
+        autoplay: 3000,
         hoverpause: !0,
         perView: 3,
         animationDuration: 800,
@@ -48,6 +48,10 @@
 })();
 document.addEventListener("DOMContentLoaded", function () {
   const cursor = document.querySelector(".cursor");
+  const links = document.querySelectorAll("a");
+  const btns = document.querySelectorAll("button");
+  const slides = document.querySelectorAll(".glide__slide");
+  const allElements = [...links, ...btns, ...slides];
 
   document.addEventListener("mousemove", (e) => {
     cursor.setAttribute(
@@ -61,5 +65,14 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       cursor.classList.remove("expand");
     }, 500);
+  });
+
+  allElements.forEach((el) => {
+    el.addEventListener("mouseover", () => {
+      cursor.classList.add("cursor-hover");
+    });
+    el.addEventListener("mouseout", () => {
+      cursor.classList.remove("cursor-hover");
+    });
   });
 });

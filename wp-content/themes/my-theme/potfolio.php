@@ -16,7 +16,7 @@ get_header();
     </nav>
   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/customair-mockup.jpg" alt="" />
   <div class="project-info">
-    <h2>Lorem ipsum dolor sit</h2>
+    <h2>LLC Custom Air Website.</h2>
     <p>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis,
       corrupti suscipit nostrum amet quaerat commodi cupiditate ea quia
@@ -52,7 +52,7 @@ get_header();
   <div class="fx-sb project-container">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/yakist-mockup.jpg" alt="" />
     <div class="project-info fx-col-sb">
-      <h2>Lorem ipsum dolor sit</h2>
+      <h2>LLC Yakist I Budivnytstvo Website.</h2>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis,
         corrupti suscipit nostrum amet quaerat commodi cupiditate ea quia
@@ -87,7 +87,7 @@ get_header();
   class="third-project-section section container fx-sb"
   id="third-project">
   <div class="project-info fx-col-sb">
-    <h2>Lorem, ipsum dolor.</h2>
+    <h2>Photographer Website.</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vel ut sit
       expedita deserunt explicabo sed possimus mollitia nemo labore voluptatum
@@ -134,7 +134,7 @@ get_header();
   class="fifth-project-section section container fx-sb"
   id="fifth-project">
   <div class="project-info fx-col-sb">
-    <h2>Lorem, ipsum dolor.</h2>
+    <h2>Trip Management App.</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vel ut sit
       expedita deserunt explicabo sed possimus mollitia nemo labore voluptatum

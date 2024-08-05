@@ -91,6 +91,11 @@
             </li>
           </ul>
         </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+    <button class="glide__bullet" data-glide-dir="=0"></button>
+    <button class="glide__bullet" data-glide-dir="=1"></button>
+    <button class="glide__bullet" data-glide-dir="=2"></button>
+  </div>
       </div>
     </div>
   </div>
@@ -125,8 +130,8 @@
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup3.jpg" alt="" />
           </a>
           <div class="fx-col-sb">
-            <p>Mobile</p>
-            <p>Lorem, ipsum dolor.</p>
+            <p>Website</p>
+            <a href="portfolio/#first-project" class="project-link">View Project</a>
           </div>
         </div>
         <div class="card">
@@ -138,8 +143,8 @@
             />
           </a>
           <div class="fx-col-sb">
-            <p>Web</p>
-            <p>Lorem, ipsum dolor.</p>
+            <p>Website</p>
+            <a href="portfolio/#second-project" class="project-link">View Project</a>
           </div>
         </div>
         <div class="card">
@@ -147,8 +152,8 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup1.jpg" alt="" />
           </a>
           <div class="fx-col-sb">
-            <p>Web</p>
-            <p>Lorem, ipsum dolor.</p>
+            <p>Landing</p>
+            <a href="portfolio/#third-project" class="project-link">View Project</a>
           </div>
         </div>
         <div class="card">
@@ -156,8 +161,8 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup2.jpg" alt="" />
           </a>
           <div class="fx-col-sb">
-            <p>Web</p>
-            <p>Lorem, ipsum dolor.</p>
+            <p>Web Application</p>
+            <a href="portfolio/" class="project-link">View Project</a>
           </div>
         </div>
       </div>
@@ -294,11 +299,7 @@
           </div>
           <p>
             Direct development of the website using selected technologies and
-            tools. This includes coding, graphic design, content integration,
-            and functionality testing. Incremental updates to the client about
-            the progress and providing opportunities for feedback are crucial
-            during this stage. the progress and providing opportunities for
-            feedback are crucial
+            tools.  This process encompasses various tasks, including writing code for the site’s structure and features, designing graphics that enhance the user experience, integrating content such as text, images, and multimedia, and thoroughly testing all functionalities to ensure they work as intended.
           </p>
         </div>
         <div class="card">
@@ -325,9 +326,7 @@
   </div>
   <h2>Client Talking</h2>
   <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi, quis
-    soluta eum facilis laborum eligendi magnam cupiditate minus at maiores
-    excepturi dicta corporis, distinctio nisi ex.
+  My clients appreciate the quality, speed, and reliability of my work. Their reviews highlight my attention to detail, creative approach, and ability to bring ideas to life. I strive to exceed expectations and build strong, lasting relationships.
   </p>
   <div class="review">
     <img src="" alt="" class="review-img" />

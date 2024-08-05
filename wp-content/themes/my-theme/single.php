@@ -1,5 +1,9 @@
 <?php
 get_header();
+
+function my_get_categories($id){
+  return implode(', ', array_map(fn($v) => $v->name, get_the_category($id)));
+ }
 ?>
 <main>
 <section class="blog-post-section container fx-col-sb">
@@ -15,7 +19,7 @@ get_header();
         ?>
         <article class="fx-col-sb container" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <header>
-            <p class="category"><?php the_category(', '); ?></p>
+            <p class="category"><?php echo my_get_categories(get_the_ID()); ?></p>
             <h2><?php the_title(); ?></h2>
             <div class="post-info fx-sb">
               <p>Date: <time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date(); ?></time></p>
@@ -27,9 +31,9 @@ get_header();
           </section>
           <footer>
             <p>
-              Categories: <?php the_category(', '); ?>
+              Categories: <?php echo my_get_categories(get_the_ID()); ?>
             </p>
-            <p>Tags: <?php the_tags(); ?></p>
+            <p><?php the_tags(); ?></p>
           </footer>
         </article>
     <?php endwhile; ?>
