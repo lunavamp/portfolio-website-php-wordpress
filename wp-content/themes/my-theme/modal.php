@@ -23,9 +23,15 @@
         <input class="btn2 btn-modal" type="submit" value="Send" />
       </form>
       <div class="social-icons fx-sb">
-        <svg><use xlink:href="#github-svg" /></svg>
-        <svg><use xlink:href="#instagram-svg" /></svg>
-        <svg><use xlink:href="#linkedin-svg" /></svg>
+      <a href="https://github.com/lunavamp">
+        <svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/svg/sprite.svg#github-svg" /></svg>
+        </a>
+        <a href="https://www.instagram.com/ui_unicorn_/">
+        <svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/svg/sprite.svg#instagram-svg" /></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/karina-kolesnichenko/">
+        <svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/svg/sprite.svg#linkedin-svg" /></svg>
+        </a>
       </div>
     </div>
   </div>

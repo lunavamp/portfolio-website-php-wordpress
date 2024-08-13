@@ -1,5 +1,5 @@
 <footer class="footer">
-  <p>2023 Copyright | All Rights Reserved</p>
+  <p>Karina Kolesnichenko | 2024 Copyright | All Rights Reserved</p>
 </footer>
 
 <?php wp_footer(); ?>

@@ -9,11 +9,17 @@
     </h1>
     <div class="fx-sb">
       <div class="social-icons fx-sb">
+        <a href="https://github.com/lunavamp">
         <svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/svg/sprite.svg#github-svg" /></svg>
+        </a>
+        <a href="https://www.instagram.com/ui_unicorn_/">
         <svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/svg/sprite.svg#instagram-svg" /></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/karina-kolesnichenko/">
         <svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/svg/sprite.svg#linkedin-svg" /></svg>
+        </a>
       </div>
-      <p class="banner-text">
+      <p class="banner-text el-observe">
       My passion is to create modern, functional, and visually appealing web applications. I strive to make each project unique and tailored to the client's needs.
       </p>
     </div>
@@ -107,7 +113,7 @@
       <h3>About</h3>
     </div>
     <h4 class="container">I've been Developing Websites since 2022</h4>
-    <p class="container">
+    <p class="container el-observe">
       I am a Frontend Developer with 2+ years of experience in building
       responsive, accessible, and performance-optimized web applications. My
       journey into the world of web development began with a fascination for how
@@ -127,42 +133,62 @@
       <div class="projects-cards fx-sb">
         <div class="card">
           <a href="portfolio/#first-project" class="project-card-img">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup3.jpg" alt="" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup3.jpg" alt="yakist i budivnytstvo website project" />
           </a>
           <div class="fx-col-sb">
             <p>Website</p>
-            <a href="portfolio/#first-project" class="project-link">View Project</a>
+           <div class="fx-sb view-project">
+           <a href="portfolio/#first-project" class="project-link">View Project</a>
+            <a href="portfolio/#first-project">
+            <svg class="open-icon"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/svg/sprite.svg#open-svg" /></svg>
+          </a>
+           </div>
           </div>
         </div>
         <div class="card">
           <a href="portfolio/#second-project" class="project-card-img">
             <img
               src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup5.jpg"
-              alt=""
+              alt="custom air website project"
               class="img-rotate"
             />
           </a>
           <div class="fx-col-sb">
             <p>Website</p>
-            <a href="portfolio/#second-project" class="project-link">View Project</a>
+            <div class="fx-sb view-project">
+          <a href="portfolio/#second-project" class="project-link">View Project</a>
+          <a href="portfolio/#second-project">
+            <svg class="open-icon"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/svg/sprite.svg#open-svg" /></svg>
+          </a>
+            </div>
           </div>
         </div>
         <div class="card">
           <a href="portfolio/#third-project" class="project-card-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup1.jpg" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup1.jpg" alt="photographer website project" />
           </a>
           <div class="fx-col-sb">
             <p>Landing</p>
+            <div class="fx-sb view-project">
             <a href="portfolio/#third-project" class="project-link">View Project</a>
+            <a href="portfolio/#third-project">
+            <svg class="open-icon"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/svg/sprite.svg#open-svg" /></svg>
+          </a>
+            </div>
           </div>
         </div>
         <div class="card">
           <a href="portfolio/" class="project-card-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup2.jpg" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup2.jpg" alt="react project" />
           </a>
           <div class="fx-col-sb">
             <p>Web Application</p>
-            <a href="portfolio/" class="project-link">View Project</a>
+           <div class="fx-sb view-project">
+           <a href="portfolio/" class="project-link">View Project</a>
+            <a href="portfolio/">
+            <svg class="open-icon"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/svg/sprite.svg#open-svg" /></svg>
+          </a>
+           </div>
           </div>
         </div>
       </div>
@@ -325,11 +351,11 @@
     <h3>Testimonials</h3>
   </div>
   <h2>Client Talking</h2>
-  <p>
+  <p class="el-observe">
   My clients appreciate the quality, speed, and reliability of my work. Their reviews highlight my attention to detail, creative approach, and ability to bring ideas to life. I strive to exceed expectations and build strong, lasting relationships.
   </p>
   <div class="review">
-    <img src="" alt="" class="review-img" />
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tech-min.jpg" alt="yakist i budivnytstvo logo" class="review-img" />
     <div class="review-cards">
       <div class="card">
         <p style="font-weight: 500">LLC Yakist I Budivnytstvo</p>
@@ -349,7 +375,7 @@
             services and projects.
           </p>
         </div>
-        <p>Borys Kryvko</p>
+        <p>Owner, Borys Kryvko</p>
       </div>
     </div>
   </div>

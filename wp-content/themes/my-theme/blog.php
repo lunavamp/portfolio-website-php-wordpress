@@ -46,7 +46,7 @@ function my_get_categories($id){
                   $query-> the_post();
              ?>
             <article class="card" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <img src="<?php the_post_thumbnail_url(); ?>" alt="">
+            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php echo esc_attr( get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ) ); ?>">
             <p class="category"><?php echo my_get_categories(get_the_ID()); ?></p>
                 <header>
                     <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
@@ -56,7 +56,7 @@ function my_get_categories($id){
                     <?php the_excerpt(); ?>
                 </div>
                 <footer>
-                    <a href="<?php the_permalink(); ?>" style="text-align:right; display:block; text-decoration:underline">Continue reading</a>
+                    <a href="<?php the_permalink(); ?>" class="continue-link">Continue reading</a>
                 </footer>
             </article>
             <?php endwhile ?>

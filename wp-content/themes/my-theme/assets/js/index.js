@@ -48,10 +48,9 @@
 })();
 document.addEventListener("DOMContentLoaded", function () {
   const cursor = document.querySelector(".cursor");
-  const links = document.querySelectorAll("a");
-  const btns = document.querySelectorAll("button");
-  const slides = document.querySelectorAll(".glide__slide");
-  const allElements = [...links, ...btns, ...slides];
+  const allElements = document.querySelectorAll(
+    "a, button, .glide__slide, summary"
+  );
 
   document.addEventListener("mousemove", (e) => {
     cursor.setAttribute(
@@ -74,5 +73,25 @@ document.addEventListener("DOMContentLoaded", function () {
     el.addEventListener("mouseout", () => {
       cursor.classList.remove("cursor-hover");
     });
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const elObserve = document.querySelectorAll(".el-observe");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+  elObserve.forEach((el) => {
+    observer.observe(el);
   });
 });
