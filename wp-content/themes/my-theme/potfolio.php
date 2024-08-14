@@ -14,7 +14,7 @@ get_header();
         <li><?php the_title(); ?></li>
     </ul>
     </nav>
-  <img class="el-observe" src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/customair-mockup.jpg" alt="Custom Air website" />
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/customair-mockup.jpg" alt="Custom Air website" />
   <div class="project-info">
     <h2>LLC Custom Air Website.</h2>
     <p>
@@ -73,7 +73,7 @@ get_header();
     Key sections include "About Me," which offers insight into the photographer's background, "Portfolio," showcasing diverse photography styles, and "Blog," providing photography tips and insights. The "Contact" page facilitates easy communication, and the footer includes additional contact information and social media links. The site effectively highlights the photographer's unique style and attracts potential clients.
     </p>
   </div>
-  <img class="el-observe" src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/photographer-mockup.jpg" alt="photographer website" />
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/photographer-mockup.jpg" alt="photographer website" />
 </section>
 <section
   class="fourth-project-section section container fx-sb"
@@ -104,7 +104,7 @@ get_header();
     In addition to managing existing trips, the app allows you to add new destinations and set specific travel dates, making it easy to organize your future adventures. The main feature of the application is its integration with weather data: it provides up-to-date weather information for your destination city and offers a detailed weather forecast for the entire duration of your trip, so you can plan your activities accordingly and avoid any weather-related surprises.
     </p>
   </div>
-  <img class="el-observe" src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/trip-mockup.jpg" alt="trip planning app" />
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/trip-mockup.jpg" alt="trip planning app" />
 </section>
 
 <?php include "modal.php";?>

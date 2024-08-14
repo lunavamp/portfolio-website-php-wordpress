@@ -448,10 +448,12 @@ p + p {
   color: #000;
   font-weight: 500;
   transition: 0.8ms ease;
+  cursor: none;
 }
 .header a:hover {
   color: #d10561;
   transform: scale(1.06);
+  cursor: none;
 }
 
 .header .container {
@@ -896,9 +898,11 @@ p + p {
   width: 1.9rem;
   height: 1.9rem;
   transition: 8ms ease;
+  cursor: none;
 }
 .social-icons svg:hover {
   transform: scale(1.1);
+  cursor: none;
 }
 
 /* skills section */

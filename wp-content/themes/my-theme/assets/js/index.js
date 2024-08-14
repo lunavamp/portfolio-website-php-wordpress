@@ -95,3 +95,19 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(el);
   });
 });
+document.querySelector('.modal-form').addEventListener('submit', function(e) {
+  e.preventDefault(); 
+  const formData = new FormData(this);
+  fetch('./functions.php', {
+      method: 'POST',
+      body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+      alert('Your message was sent successfully!');
+  })
+  .catch(error => {
+      alert('Error: Email failed to send.');
+      console.error('Error:', error);
+  });
+});
