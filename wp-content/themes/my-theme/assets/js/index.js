@@ -1,51 +1,52 @@
-!(function () {
-  const e = document.querySelector(".page-top");
-  new IntersectionObserver(
-    ([e]) => {
-      const t = 0 === e.intersectionRatio ? "add" : "remove";
-      document.documentElement.classList[t]("is-scroll");
+//responsive menu
+const burgerMenu = document.querySelector(".burger-menu-container");
+const body = document.body;
+
+burgerMenu.addEventListener("click", () => {
+  body.classList.toggle("menu-active");
+});
+document.addEventListener("click", (e) => {
+  const $el = e.target;
+  if ($el.tagName === "A" && $el.hash.startsWith("#")) {
+    body.classList.remove("menu-active");
+  }
+});
+
+// glide
+document.addEventListener("DOMContentLoaded", function () {
+  new Glide(".glide", {
+    type: "carousel",
+    startAt: 0,
+    autoplay: 3000,
+    hoverpause: true,
+    perView: 3,
+    animationDuration: 800,
+    animationTimingFunc: "ease-in-out",
+    breakpoints: {
+      990: { perView: 1 },
     },
-    { rootMargin: "0px", threshold: 1 }
-  ).observe(e),
-    document.querySelector(".header-menu");
-  const t = document.querySelector(".burger-menu-container"),
-    n = document.body;
-  t.addEventListener("click", () => {
-    n.classList.toggle("menu-active");
-  }),
-    document.addEventListener("click", (e) => {
-      const t = e.target;
-      "A" === t.tagName &&
-        t.hash.startsWith("#") &&
-        n.classList.remove("menu-active");
-    }),
-    document.addEventListener("DOMContentLoaded", function () {
-      new Glide(".glide", {
-        type: "carousel",
-        startAt: 0,
-        autoplay: 3000,
-        hoverpause: !0,
-        perView: 3,
-        animationDuration: 800,
-        animationTimingFunc: "ease-in-out",
-        breakpoints: {
-          990: { perView: 1 },
-        },
-      }).mount();
-    });
-  const o = document.getElementById("modal"),
-    c = document.querySelector(".openModal"),
-    i = document.getElementById("closeModal");
-  (c.onclick = function () {
-    o.classList.add("show");
-  }),
-    (i.onclick = function () {
-      o.classList.remove("show");
-    }),
-    (window.onclick = function (e) {
-      e.target == o && o.classList.remove("show");
-    });
-})();
+  }).mount();
+});
+
+//modal
+const modal = document.getElementById("modal");
+const btn = document.querySelector(".openModal");
+const span = document.getElementById("closeModal");
+
+btn.onclick = function () {
+  modal.classList.add("show");
+};
+
+span.onclick = function () {
+  modal.classList.remove("show");
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.classList.remove("show");
+  }
+};
+
 document.addEventListener("DOMContentLoaded", function () {
   const cursor = document.querySelector(".cursor");
   const allElements = document.querySelectorAll(
@@ -75,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const elObserve = document.querySelectorAll(".el-observe");
 
@@ -95,19 +97,19 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(el);
   });
 });
-document.querySelector('.modal-form').addEventListener('submit', function(e) {
-  e.preventDefault(); 
+document.querySelector(".modal-form").addEventListener("submit", function (e) {
+  e.preventDefault();
   const formData = new FormData(this);
-  fetch('./functions.php', {
-      method: 'POST',
-      body: formData
+  fetch("./functions.php", {
+    method: "POST",
+    body: formData,
   })
-  .then(response => response.text())
-  .then(data => {
-      alert('Your message was sent successfully!');
-  })
-  .catch(error => {
-      alert('Error: Email failed to send.');
-      console.error('Error:', error);
-  });
+    .then((response) => response.text())
+    .then((data) => {
+      alert("Your message was sent successfully!");
+    })
+    .catch((error) => {
+      alert("Error: Email failed to send.");
+      console.error("Error:", error);
+    });
 });

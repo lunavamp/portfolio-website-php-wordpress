@@ -17,24 +17,22 @@
     <header class="header">
   <div class="container">
     <div class="fx-sb header-menu-container">
-      <nav>
       <?php
   wp_nav_menu(array(
       'theme_location' => 'primary', 
       'container' => 'nav',
-      'menu_class' => 'header-menu fx-sb', 
+      'menu_class' => 'header-menu', 
       'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', 
   ));
   ?>
-      </nav>
       <button class="btn1 openModal">Start Project</button>
-    </div>
-    <div class="burger-menu-container">
+      <div class="burger-menu-container">
       <div class="burger-icon fx-col-sb">
         <span></span>
         <span></span>
         <span></span>
       </div>
+    </div>
     </div>
   </div>
 </header>

@@ -3,8 +3,6 @@
 Template Name: Blog
 */
 get_header();
-
-
 $search = isset($_GET['search']) ? $_GET['search'] : '';
 
 $query_args = [
@@ -13,12 +11,12 @@ $query_args = [
   'post_type' => 'post'
 ]; 
 
-if(isset($search)){
-  $query_args['s'] = trim($_GET['search']);
+if (!empty($search)) {  
+  $query_args['s'] = trim($search);
 }
 
-function my_get_categories($id){
- return implode(', ', array_map(fn($v) => $v->name, get_the_category($id)));
+function my_get_categories($id) {
+  return implode(', ', array_map(fn($v) => $v->name, get_the_category($id)));
 }
 ?>
 <main>
@@ -33,11 +31,12 @@ function my_get_categories($id){
 <h2>Blog</h2>
 
         <form action="" method="get" class="search fx-sb">
-          <input type="search" name="search" value="<?php echo $search; ?>" placeholder="Search by title..." />
-          <button  type="submit">
+          <input type="search" name="search" value="<?php echo htmlspecialchars($search); ?>" placeholder="Search by title..." />
+          <button type="submit">
             <svg><use xlink:href="#search-svg" /></svg>
           </button>
         </form>
+
         <div class="blog-cards">
             <?php 
             wp_reset_query(); 

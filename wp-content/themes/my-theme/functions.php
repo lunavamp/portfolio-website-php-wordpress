@@ -13,15 +13,11 @@ function portfolio_scripts() {
 
 add_theme_support( 'post-thumbnails' );
 
-function enqueue_svg_sprite() {
-    
-    wp_enqueue_script('svg-sprite', get_template_directory_uri() . '/assets/svg/sprite.svg', array(), null, true);
-}
-add_action('wp_enqueue_scripts', 'enqueue_svg_sprite');
-
 function add_footer_scripts() {
     wp_enqueue_script('glide-js', 'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js');
     wp_enqueue_script('main_script', get_template_directory_uri() . '/assets/js/index.js');
+    wp_enqueue_script( 'gsap-js', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js', array(), false, true );
+    wp_enqueue_script( 'gsap-st', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js', array('gsap-js'), false, true );
     $sprite = file_get_contents(get_template_directory() . '/assets/svg/sprite.svg');
     echo $sprite;
 }

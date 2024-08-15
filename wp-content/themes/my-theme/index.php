@@ -3,7 +3,7 @@
     <section class="banner-section section">
   <div class="banner-info fx-col-sb container">
     <p class="banner-greeting">Hello! I'm Karina.</p>
-    <h1>
+    <h1 class="main-title-banner">
       <span>Developing</span> modern, efficient <span>websites</span> with clean
       code and intuitive design
     </h1>
@@ -19,7 +19,7 @@
         <svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/svg/sprite.svg#linkedin-svg" /></svg>
         </a>
       </div>
-      <p class="banner-text el-observe">
+      <p class="banner-text">
       My passion is to create modern, functional, and visually appealing web applications. I strive to make each project unique and tailored to the client's needs.
       </p>
     </div>
