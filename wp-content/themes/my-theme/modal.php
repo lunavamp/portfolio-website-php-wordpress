@@ -1,10 +1,10 @@
 <div id="modal" class="modal">
   <div class="modal-content fx-sb">
-    <div class="modal-bg"></div>
+    <img class="modal-bg" src="./assets/img/bg.webp" alt="modal background">
     <div class="modal-form-container fx-col-sb">
       <span class="close" id="closeModal">&times;</span>
       <p>Send Me A Message</p>
-      <form action="" class="modal-form fx-col-sb">
+      <form class="modal-form fx-col-sb contact-form">
         <label class="fx-col-sb">
           Name:
           <input type="text" name="name" />
@@ -20,7 +20,8 @@
           <textarea name="message" rows="5"></textarea>
         </label>
 
-        <input class="btn2 btn-modal" type="submit" value="Send" />
+        <input class="btn2 btn-modal submit-btn" name="submit" type="submit" value="Send" />
+        <p class="form-status"></p>
       </form>
       <div class="social-icons fx-sb">
       <a href="https://github.com/lunavamp">

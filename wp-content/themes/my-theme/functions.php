@@ -23,27 +23,5 @@ function add_footer_scripts() {
 }
 add_action('wp_footer', 'add_footer_scripts');
 
-function send_mail() {
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $name = sanitize_text_field($_POST['name']);
-        $email = sanitize_email($_POST['email']);
-        $message = sanitize_textarea_field($_POST['message']);
-    
-        $to = 'karina.kolesnichenko@outlook.com'; 
-        $subject = 'New message from contact form';
-        $body = "Name: $name\nEmail: $email\nMessage:\n$message";
-    
-        $headers = array('Content-Type: text/plain; charset=UTF-8');
-    
-        if (wp_mail($to, $subject, $body, $headers)) {
-            echo 'Your message was sent successfully!';
-        } else {
-            echo 'Error: Email failed to send.';
-        }
-    }
-}
-
-add_action('wp_enqueue_scripts', 'send_mail');
-
 ?>
 

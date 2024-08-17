@@ -12,22 +12,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// glide
-document.addEventListener("DOMContentLoaded", function () {
-  new Glide(".glide", {
-    type: "carousel",
-    startAt: 0,
-    autoplay: 3000,
-    hoverpause: true,
-    perView: 3,
-    animationDuration: 800,
-    animationTimingFunc: "ease-in-out",
-    breakpoints: {
-      990: { perView: 1 },
-    },
-  }).mount();
-});
-
 //modal
 const modal = document.getElementById("modal");
 const btn = document.querySelector(".openModal");
@@ -97,19 +81,63 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(el);
   });
 });
-document.querySelector(".modal-form").addEventListener("submit", function (e) {
+
+//recaptcha and form
+const d = document,
+  bC = body.classList,
+  l = location,
+  $ = (e, c = d) => c.querySelector(e),
+  $$ = (e, c = d) => c.querySelectorAll(e),
+  $e = (sel, type, func) => sel.addEventListener(type, func);
+
+const $form = $("form");
+const $formStatus = $(".form-status", $form);
+
+$e($form, "input", function (e) {
+  const els = this.elements;
+  const el = e.target;
+
+  els.submit.disabled = !els.name.value || !els.message.value;
+});
+const mailStatus = (msg, s) => {
+  $formStatus.textContent = msg;
+  $formStatus.classList[s ? "add" : "remove"]("success");
+  $formStatus.classList[s ? "remove" : "add"]("error");
+};
+$e($form, "submit", function (e) {
+  const els = this.elements;
   e.preventDefault();
-  const formData = new FormData(this);
-  fetch("./functions.php", {
-    method: "POST",
-    body: formData,
-  })
-    .then((response) => response.text())
-    .then((data) => {
-      alert("Your message was sent successfully!");
-    })
-    .catch((error) => {
-      alert("Error: Email failed to send.");
-      console.error("Error:", error);
-    });
+  grecaptcha.ready(function () {
+    grecaptcha
+      .execute("6Le1KSgqAAAAANObgXPpNY3q0HMR2YBzOFvf8GKH", { action: "submit" })
+      .then(function (token) {
+        $formStatus.textContent = "Sending in progress";
+        els.submit.disabled = true;
+        const form = { token };
+        for (let i = 0; i < els.length; i++) {
+          const item = els[i];
+          form[item.name] = item.value;
+        }
+        fetch("/wp-content/themes/my-theme/sendMail.php", {
+          method: "POST",
+          body: JSON.stringify(form),
+        })
+          .then((v) => v.json())
+          .then((v) => {
+            if (v.status) {
+              for (let i = 0; i < els.length; i++) {
+                els[i].value = "";
+              }
+              mailStatus("Send successfully", 1);
+            } else {
+              mailStatus("Message didnt send", 0);
+            }
+            els.submit.disabled = false;
+          })
+          .catch(() => {
+            mailStatus("Message didnt send", 0);
+            els.submit.disabled = false;
+          });
+      });
+  });
 });

@@ -7,7 +7,7 @@
       <span>Developing</span> modern, efficient <span>websites</span> with clean
       code and intuitive design
     </h1>
-    <div class="fx-sb">
+    <div class="fx-sb banner-info-container">
       <div class="social-icons fx-sb">
         <a href="https://github.com/lunavamp">
         <svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/svg/sprite.svg#github-svg" /></svg>
@@ -19,7 +19,7 @@
         <svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/svg/sprite.svg#linkedin-svg" /></svg>
         </a>
       </div>
-      <p class="banner-text">
+      <p class="banner-text el-observe">
       My passion is to create modern, functional, and visually appealing web applications. I strive to make each project unique and tailored to the client's needs.
       </p>
     </div>
@@ -133,7 +133,7 @@
       <div class="projects-cards fx-sb">
         <div class="card">
           <a href="portfolio/#first-project" class="project-card-img">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup3.jpg" alt="yakist i budivnytstvo website project" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup3.webp" alt="yakist i budivnytstvo website project" />
           </a>
           <div class="fx-col-sb">
             <p>Website</p>
@@ -148,7 +148,7 @@
         <div class="card">
           <a href="portfolio/#second-project" class="project-card-img">
             <img
-              src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup5.jpg"
+              src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup5.webp"
               alt="custom air website project"
               class="img-rotate"
             />
@@ -165,7 +165,7 @@
         </div>
         <div class="card">
           <a href="portfolio/#third-project" class="project-card-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup1.jpg" alt="photographer website project" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup1.webp" alt="photographer website project" />
           </a>
           <div class="fx-col-sb">
             <p>Landing</p>
@@ -179,7 +179,7 @@
         </div>
         <div class="card">
           <a href="portfolio/" class="project-card-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup2.jpg" alt="react project" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mockups/mockup2.webp" alt="react project" />
           </a>
           <div class="fx-col-sb">
             <p>Web Application</p>
@@ -355,7 +355,7 @@
   My clients appreciate the quality, speed, and reliability of my work. Their reviews highlight my attention to detail, creative approach, and ability to bring ideas to life. I strive to exceed expectations and build strong, lasting relationships.
   </p>
   <div class="review">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tech-min.jpg" alt="yakist i budivnytstvo logo" class="review-img" />
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tech-min.webp" alt="yakist i budivnytstvo logo" class="review-img" />
     <div class="review-cards">
       <div class="card">
         <p style="font-weight: 500">LLC Yakist I Budivnytstvo</p>
@@ -384,6 +384,23 @@
     </main>
     <?php get_footer(); ?>
     <div class="cursor"></div>
+    <script>
+      // glide
+document.addEventListener("DOMContentLoaded", function () {
+  new Glide(".glide", {
+    type: "carousel",
+    startAt: 0,
+    autoplay: 3000,
+    hoverpause: true,
+    perView: 3,
+    animationDuration: 800,
+    animationTimingFunc: "ease-in-out",
+    breakpoints: {
+      990: { perView: 1 },
+    },
+  }).mount();
+});
+    </script>
   </body>
 </html>
 

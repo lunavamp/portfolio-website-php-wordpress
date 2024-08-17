@@ -10,6 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri();?>/assets/img/favicon.ico">
+    <script src="https://www.google.com/recaptcha/api.js?render=6Le1KSgqAAAAANObgXPpNY3q0HMR2YBzOFvf8GKH"></script>
     <?php wp_head(); ?>
   </head>
   <body <?php echo body_class()?>>
